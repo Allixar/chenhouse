@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Main Entrees 主菜": [
             { name: "Beef and Broccoli 芥蓝牛肉", description: "Stir-fried beef with tender broccoli.", price: 12.00, img: "https://christieathome.com/wp-content/uploads/2020/09/Chinese-Beef-and-Broccoli-9.jpg" },
             { name: "General Tso's Chicken 左宗梦鸡", description: "Crispy chicken in a tangy sauce.", price: 11.50, img: "https://www.recipetineats.com/tachyon/2020/10/General-Tsao-Chicken_1-SQ.jpg?resize=500%2C500" },
-            { name: "Orange Chicken 橙香鸡", description: "Battered chicken in orange sauce.", price: 11.00, img: "https://norecipes.com/wp-content/uploads/2017/06/orange-chicken-005.jpg" },
+            { name: "Orange Chicken 橙香鸡", description: "Battered chicken in orange sauce.", price: 11.00, img: "https://thenoshery.com/wp-content/uploads/2017/05/Orange-Chicken-9.jpg" },
             { name: "Szechuan Pork 四川辣肉", description: "Spicy Szechuan-style stir-fried pork.", price: 13.00, img: "https://www.grandpajoesitaliankitchen.com/uploads/4/7/3/4/4734633/9692919_orig.jpg" },
             { name: "Roasted Duck 烤鸭", description: "Duck roasted with a crispy skin.", price: 13.00, img: "https://omnivorescookbook.com/wp-content/uploads/2025/01/250114_Chinese-Roast-Duck_4.jpg" },
         ],
