@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | Chen's House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-gray-800">
+    <div class="max-w-2xl mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center">
+        <h1 class="text-4xl font-bold text-amber-700 mb-4">Thank You!</h1>
+        <p class="text-lg text-gray-600 mb-6">Your order has been placed successfully.</p>
+        
+        <div id="confirmation-details" class="text-left border-t border-b py-6 my-6">
+            <h2 class="text-2xl font-bold text-center mb-4">Order Summary</h2>
+            <!-- Order details will be populated here by JavaScript -->
+        </div>
+
+        <p class="text-gray-600">Your order will be ready for pickup in approximately 20-25 minutes.</p>
+        <p class="mt-2"><strong>Address:</strong> 813 Dragon Street, Tampa, FL 33602</p>
+
+        <a href="Menu.html" class="inline-block mt-8 bg-amber-500 text-white px-6 py-3 rounded-lg hover:bg-amber-600 transition-colors">Return to Menu</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderDetailsContainer = document.getElementById('confirmation-details');
+            const savedOrder = sessionStorage.getItem('customerOrder');
+
+            if (savedOrder) {
+                const order = JSON.parse(savedOrder);
+                let orderHtml = '<div class="space-y-2">';
+                let subtotal = 0;
+
+                order.forEach(item => {
+                    orderHtml += `
+                        <div class="flex justify-between">
+                            <span>${item.name}</span>
+                            <span class="font-semibold">$${item.price.toFixed(2)}</span>
+                        </div>
+                    `;
+                    subtotal += item.price;
+                });
+
+                const tax = subtotal * 0.06;
+                const total = subtotal + tax;
+
+                orderHtml += '</div>';
+                orderHtml += `
+                    <div class="border-t mt-4 pt-4 space-y-2">
+                        <div class="flex justify-between">
+                            <span>Subtotal</span>
+                            <span>$${subtotal.toFixed(2)}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tax (6%)</span>
+                            <span>$${tax.toFixed(2)}</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-lg">
+                            <span>Total</span>
+                            <span>$${total.toFixed(2)}</span>
+                        </div>
+                    </div>
+                `;
+
+                orderDetailsContainer.innerHTML = orderHtml;
+            } else {
+                orderDetailsContainer.innerHTML = '<p class="text-center text-gray-500">No order details found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
