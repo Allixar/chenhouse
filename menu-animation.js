@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateTotals();
     };
-
+     // Adds the roder when notified.
      const addToOrder = (item) => {
         order.push(item);
         renderOrder();
