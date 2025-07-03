@@ -133,6 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTotals();
     };
 
+     const addToOrder = (item) => {
+        order.push(item);
+        renderOrder();
+    
+        // Ring the cart icon here
+        const cartIcon = document.getElementById('cart-icon');
+        cartIcon.classList.add('animate-bounce');
+        setTimeout(() => {
+            cartIcon.classList.remove('animate-bounce');
+        }, 500);
+    };
+
     // Update Totals
     const updateTotals = () => {
         const subtotal = order.reduce((sum, item) => sum + item.price, 0);
