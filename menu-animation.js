@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const comboData = {
-        "Main Entree": ["Beef and Broccoli", "General Tso's Chicken", "Orange Chicken", "Szechuan Pork", "Roasted Duck"],
-        "Appetizer": ["Spring Rolls", "Boiled Eggs", "Jiao Zi", "Baozi", "Oyster Cookies"],
+        "Main Entree": ["Beef and Broccoli ", "General Tso's Chicken", "Orange Chicken", "Szechuan Pork", "Roasted Duck"],
+        "Appetizer": ["Spring Rolls", "Boiled Eggs", "Jiaozi", "Baozi", "Oyster Cookies"],
         "Side Dish": ["Meat Fried Rice", "Vegetable Fried Rice", "Meat Fried Noodles", "Vegetable Fried Noodles", "Steamed Rice"]
     };
 
