@@ -34,12 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const reviews = [
-        { author: "— Savannah D.", text: "Absolutely the best Chinese food in Tampa! My Boyfriend and I love Jiaozi so much!" },
+        { author: "— Savannah D.", text: "Absolutely the best Chinese food in Tampa! My boyfriend and I love Jiaozi so much!" },
         { author: "— Hannah D.", text: "Incredible flavor and great service. The Szechuan Pork has the perfect amount of spice." },
         { author: "— Nicole C.", text: "I order from Chen's House every Friday. Consistent, delicious, and always fresh. The combo is a great deal!" },
         { author: "— Ally S.", text: "Chen's House customer service is top notch. The owner Allen always throws in extra cookies on top of order" },
         { author: "— Miguel L.", text: "Allen puts in crazy amount of work on cooking the best food in town!" }, 
-        { author: "— Sarah E.", text: "The strawberry boba is so creamy and sweet!" }
+        { author: "— Sarah E.", text: "The strawberry boba is so creamy and sweet!" },
+        { author: "— Gianni M.", text: "Allen makes the best hot and sour soup in town. Nothing compares to Chen's House." }
     ];
 
     let order = [];
